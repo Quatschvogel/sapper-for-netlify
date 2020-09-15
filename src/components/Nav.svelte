@@ -3,58 +3,76 @@
 </script>
 
 <style>
-	nav {
-		border-bottom: 1px solid rgba(255,62,0,0.1);
-		font-weight: 300;
-		padding: 0 1em;
+	img {
+		height: 100%;
+		width: 70%;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	
+	.containerFix {
+		height: 200px;
 	}
 
-	ul {
-		margin: 0;
-		padding: 0;
+	.active {
+		color:firebrick;
 	}
 
-	/* clearfix */
-	ul::after {
-		content: '';
-		display: block;
-		clear: both;
-	}
-
-	li {
-		display: block;
-		float: left;
-	}
-
-	[aria-current] {
-		position: relative;
-		display: inline-block;
-	}
-
-	[aria-current]::after {
-		position: absolute;
-		content: '';
-		width: calc(100% - 1em);
-		height: 2px;
-		background-color: rgb(255,62,0);
-		display: block;
-		bottom: -1px;
+	a:hover {
+		color: firebrick;
+		text-decoration: none;
 	}
 
 	a {
-		text-decoration: none;
-		padding: 1em 0.5em;
-		display: block;
+		color: white;
+		font-size: 20px;
+		padding-right: 20px;
 	}
+
 </style>
-
-<nav>
-	<ul>
-		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">home</a></li>
-		<li><a aria-current="{segment === 'about' ? 'page' : undefined}" href="about">about</a></li>
-
-		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
-		     the blog data when we hover over the link or tap it on a touchscreen -->
-		<li><a rel=prefetch aria-current="{segment === 'blog' ? 'page' : undefined}" href="blog">blog</a></li>
-	</ul>
+<section>
+	<div class="row text-center">
+		<div class="jumbotron containerFix" style="padding:0;margin:0" >
+			<img src="successkid.jpg" alt="Success Kid" class="img-fluid" style="border-radius: 50px">
+		</div>
+	</div>
+</section>
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+	<div class="navbar-brand" style="padding-right:30px; font-size:25px;">Immore</div>
+	<button 
+		class="navbar-toggler" 
+		type="button" 
+		data-toggle="collapse" 
+		data-target="#navbarNav" 
+		aria-controls="navbarNav" 
+		aria-expanded="false" 
+		aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarNav">
+		<ul class="navbar-nav">
+		  <li>
+			<a 	aria-current="{segment === undefined ? 'page' : undefined}" 
+				href="." 
+				class="{segment === undefined ? "active" : ""}">
+				Home
+			</a>
+		  </li>
+		  <li class="nav-item">
+			<a 	aria-current="{segment === 'about' ? 'page' : undefined}" 
+				href="about"
+				class="{segment === 'about' ? "active" : ""}">
+				About
+			</a>
+		  </li>
+		  <li class="nav-item">
+			<a 	rel=prefetch 
+				aria-current="{segment === 'blog' ? 'page' : undefined}" 
+				href="blog"
+				class="{segment === 'blog' ? "active" : ""}">
+				Blog
+			</a>
+		  </li>
+		</ul>
+	  </div>
 </nav>

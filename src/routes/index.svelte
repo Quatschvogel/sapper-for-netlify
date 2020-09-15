@@ -1,33 +1,19 @@
 <style>
-	h1, figure, p {
+	h1 {
 		text-align: center;
 		margin: 0 auto;
 	}
 
 	h1 {
-		font-size: 2.8em;
+		font-size: 0.8em;
 		text-transform: uppercase;
 		font-weight: 700;
 		margin: 0 0 0.5em 0;
 	}
 
-	figure {
-		margin: 0 0 1em 0;
-	}
-
-	img {
-		width: 100%;
-		max-width: 400px;
-		margin: 0 0 1em 0;
-	}
-
-	p {
-		margin: 1em auto;
-	}
-
 	@media (min-width: 480px) {
 		h1 {
-			font-size: 4em;
+			font-size: 3em;
 		}
 	}
 </style>
@@ -35,15 +21,20 @@
 <svelte:head>
 	<title>Sapper project template</title>
 </svelte:head>
+<main>
+<h1>Unser Youtubekanal!</h1>
+<div class="jumbotron">
+<div class="embed-responsive embed-responsive-16by9">
+	<iframe 
+		class="embed-responsive-item" 
+		src="https://www.youtube.com/embed/DilHMEovGgY" 
+		allowfullscreen
+		title="Immore Video">
+	</iframe>
+</div>
+</div>
+	
 
-<h1>Great success! Test</h1>
-
-<figure>
-	<img alt='Success Kid' src='successkid.jpg'>
-	<figcaption>Have fun with Sapper! Mal gucken</figcaption>
-</figure>
-
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
 <form>
 	<div class="form-group">
 	  <label for="exampleInputEmail1">Email address</label>
@@ -60,3 +51,4 @@
 	</div>
 	<button type="submit" class="btn btn-primary">Submit</button>
   </form>
+</main>
