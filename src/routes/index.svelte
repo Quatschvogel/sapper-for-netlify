@@ -14,6 +14,8 @@
 		height: 1000px;
 	}
 
+
+
 	@media (min-width: 480px) {
 		h1 {
 			font-size: 3em;
