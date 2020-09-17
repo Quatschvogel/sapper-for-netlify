@@ -25,16 +25,17 @@
 	}
 
 	.jumbotron {
-		max-width: 700px;
-		max-height: 700px;
+		max-width: 750px;
+		max-height: 750px;
 		margin: auto;
 		margin-top: 40px;
 		margin-bottom: 30px;
+		padding: 20px;
 	}
 
 	.containerBackground {
-		margin-left: 20px;
-		margin-right: 20px;
+		margin-left: 5px;
+		margin-right: 5px;
 	}
 
 	@media (min-width: 480px) {

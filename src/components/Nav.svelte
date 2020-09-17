@@ -88,6 +88,7 @@
 			background: #5b78c7;
 			height: 100vh;
 			width: 100%;
+			margin: auto;
 			clip-path: circle(20px at 100% -10%);
 			-webkit-clip-path: circle(20px at 100% -10%);
 			transition: all 0.4s ease-out;
