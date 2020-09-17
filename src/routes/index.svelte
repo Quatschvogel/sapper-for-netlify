@@ -1,3 +1,13 @@
+<!--------------------------------------------------------------------------->
+<!------------------------ JAVASCRIPT DER COMPONENTE ------------------------>
+<!--------------------------------------------------------------------------->
+<script>
+
+</script>
+
+<!--------------------------------------------------------------------------->
+<!---------------------- CSS / BOOTSTRAP DER COMPONENTE --------------------->
+<!--------------------------------------------------------------------------->
 <style>
 	h1 {
 		text-align: center;
@@ -14,7 +24,18 @@
 		height: 1000px;
 	}
 
+	.jumbotron {
+		max-width: 700px;
+		max-height: 700px;
+		margin: auto;
+		margin-top: 40px;
+		margin-bottom: 30px;
+	}
 
+	.containerBackground {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
 
 	@media (min-width: 480px) {
 		h1 {
@@ -23,10 +44,14 @@
 	}
 </style>
 
+<!--------------------------------------------------------------------------->
+<!----------------------- HTML / MARKUP DER COMPONENTE ---------------------->
+<!--------------------------------------------------------------------------->
 <svelte:head>
 	<title>Home</title>
 </svelte:head>
-<main>
+
+<div class="containerBackground">
 <div class="jumbotron">
 <div class="embed-responsive embed-responsive-16by9">
 	<iframe 
@@ -60,4 +85,4 @@
 
   <div class="containerFix"></div>
   <h1>Bis hier kannst du scrollen</h1>
-</main>
+</div>
