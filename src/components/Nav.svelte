@@ -95,6 +95,11 @@
 			justify-content: space-evenly;
 		}
 		.nav-links.open {
+			margin: auto;
+			width: 100%;
+			padding-right: 50%;
+			padding-left: 50%;
+			padding-bottom: 10%;
 			clip-path: circle(1000px at 100% -10%);
 			-webkit-clip-path: circle(1000px at 100% -10%);
 		}

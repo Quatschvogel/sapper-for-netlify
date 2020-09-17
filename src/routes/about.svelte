@@ -54,8 +54,20 @@
 			width: 100%;
 			margin: 0 !important;
 		}
+		.btn-success {
+			display: flex;
+			margin-left: 80%;
+			margin-top: 5%;
+		}
 	}
 	
+	@media screen and (max-width: 450px) {
+		.btn-success {
+			display: flex;
+			margin-left: 68%;
+			margin-top: 0%;
+		}
+	}
 
 	@media screen and (min-width: 768px) {
 		.containerHintergrund {
