@@ -14,11 +14,12 @@
 	}
 	.containerHintergrund {
 		background: #e9ecef;
-		width: 90%;
+		width: 97%;
 		height: 200px;
 		border: 1px solid transparent;
 		border-radius: 10px;
 		margin-bottom: 20px;
+
 	}
 
 	.containerHintergrund h1 {
@@ -47,6 +48,13 @@
 		margin-left: 70%;
 	}
 
+	@media screen and (max-width: 768px) {
+		.no-Padding {
+			padding: 0 !important;
+			width: 100%;
+			margin: 0 !important;
+		}
+	}
 	
 
 	@media screen and (min-width: 768px) {
