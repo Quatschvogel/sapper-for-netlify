@@ -30,6 +30,7 @@
 		list-style: none;
 		width: 30%;
 		height: 100%;
+		justify-content: space-between;
 		align-items: center;
 		margin-left: auto;
 	}
@@ -68,13 +69,15 @@
 			flex-direction: column;
 			position: relative;
 			background: #008ACD;
-			height: 100vh;
+			height: 50vh;
 			width: 100%;
-			margin: auto;
+			margin-left: auto;
+			margin-right: auto;
+			padding-top: 30%;
 			clip-path: circle(20px at 0% -10%);
 			-webkit-clip-path: circle(20px at 0% -10%);
 			transition: all 0.4s ease-out;
-			justify-content: space-evenly;
+			justify-content: space-between;
 		}
 		.nav-links.open {
 			margin: auto;
@@ -83,8 +86,9 @@
 			padding-left: 25%;
 			padding-bottom: 20%;
 			height: 60hv;
-			clip-path: circle(750px at 0% -10%);
-			-webkit-clip-path: circle(700px at 0% -10%);
+			justify-content: space-between;
+			clip-path: circle(1000px at 0% -10%);
+			-webkit-clip-path: circle(1000px at 0% -10%);
 		}
 
 		.nav-links li a {
