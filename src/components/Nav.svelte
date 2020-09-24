@@ -82,10 +82,10 @@
 			width: 100%;
 			padding-right: 25%;
 			padding-left: 25%;
-			padding-bottom: 10%;
+			padding-bottom: 20%;
 			height: 60hv;
 			clip-path: circle(750px at 0% -10%);
-			-webkit-clip-path: circle(750px at 0% -10%);
+			-webkit-clip-path: circle(700px at 0% -10%);
 		}
 
 		.nav-links li a {
