@@ -32,7 +32,7 @@
 		height: 100%;
 		justify-content: space-between;
 		align-items: center;
-		margin-left: auto;
+
 	}
 
 	.nav-links li a {
