@@ -79,12 +79,13 @@
 		}
 		.nav-links.open {
 			margin: auto;
-			width: 80%;
+			width: 100%;
 			padding-right: 25%;
 			padding-left: 25%;
 			padding-bottom: 10%;
-			clip-path: circle(800px at 0% -10%);
-			-webkit-clip-path: circle(800px at 0% -10%);
+			height: 60hv;
+			clip-path: circle(750px at 0% -10%);
+			-webkit-clip-path: circle(750px at 0% -10%);
 		}
 
 		.nav-links li a {
