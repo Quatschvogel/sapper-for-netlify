@@ -60,11 +60,19 @@
 			margin-top: 5%;
 		}
 	}
+
+	@media screen and (max-width: 350px) {
+		.btn-success {
+			display: flex;
+			margin-left: 30%;
+			margin-top: 0%;
+		}
+	}
 	
 	@media screen and (max-width: 450px) {
 		.btn-success {
 			display: flex;
-			margin-left: 68%;
+			margin-left: 65%;
 			margin-top: 0%;
 		}
 	}
