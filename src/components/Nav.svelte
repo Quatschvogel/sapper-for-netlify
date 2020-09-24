@@ -30,7 +30,6 @@
 		list-style: none;
 		width: 30%;
 		height: 100%;
-		justify-content: space-around;
 		align-items: center;
 		margin-left: auto;
 	}
