@@ -18,7 +18,7 @@
 <style>
 	nav {
 		height: 50px;
-		background: #5b78c7;
+		background: #008ACD;
 		position: sticky;
 		top: 0;
 		z-index: 20;
@@ -63,45 +63,28 @@
 		font-size: 30px;
 	}
 
-	.lable {
-		position: absolute;
-		cursor: pointer;
-		left: 5%;
-		top: 50%;
-		z-index: 50;
-		transform: translate(-5%, -50%);
-	}
-
-	.lable a {
-		color: white;
-		font-weight: bold;
-		font-size: 20px;
-		text-decoration: none;
-	}
-
-
 
 	@media screen and (max-width: 768px) {
 		.nav-links {
 			flex-direction: column;
 			position: relative;
-			background: #5b78c7;
+			background: #008ACD;
 			height: 100vh;
 			width: 100%;
 			margin: auto;
-			clip-path: circle(20px at 100% -10%);
-			-webkit-clip-path: circle(20px at 100% -10%);
+			clip-path: circle(20px at 0% -10%);
+			-webkit-clip-path: circle(20px at 0% -10%);
 			transition: all 0.4s ease-out;
 			justify-content: space-evenly;
 		}
 		.nav-links.open {
 			margin: auto;
 			width: 100%;
-			padding-right: 50%;
-			padding-left: 50%;
+			padding-right: 25%;
+			padding-left: 25%;
 			padding-bottom: 10%;
-			clip-path: circle(1000px at 100% -10%);
-			-webkit-clip-path: circle(1000px at 100% -10%);
+			clip-path: circle(1000px at 0% -10%);
+			-webkit-clip-path: circle(1000px at 0% -10%);
 		}
 
 		.nav-links li a {
@@ -139,7 +122,7 @@
 		.hamburger {
 			position: absolute;
 			cursor: pointer;
-			right: 5%;
+			left: 5%;
 			top: 50%;
 			z-index: 50;
 			transform: translate(-5%, -50%);
@@ -154,13 +137,6 @@
 <!--------------------------------------------------------------------------->
 <div class="containerFix"><h1>Hier ist dann das Logo</h1></div>
 <nav>
-	<div class="lable">
-		<a 	aria-current="{segment === undefined ? 'page' : undefined}" 
-			href="." 
-			class="{segment === undefined ? "active" : ""}">
-			Immore
-		</a>	
-	</div>
 	<div class="hamburger" on:click={onClick}>
 		<div class="line"></div>
 		<div class="lineMiddle"></div>
@@ -181,7 +157,7 @@
 			aria-current="{segment === 'blog' ? 'page' : undefined}" 
 			href="blog"
 			class="{segment === 'blog' ? "active" : ""}" on:click={onClick}>
-			About
+			Über uns
 		</a></li>
 	</ul>
 </nav>
