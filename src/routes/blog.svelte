@@ -2,6 +2,23 @@
 <!------------------------ JAVASCRIPT DER COMPONENTE ------------------------>
 <!--------------------------------------------------------------------------->
 <script>
+	import BlogBeitrag from '../components/blog_beitrag.svelte'
+	let name = "Kilian";
+
+	let blogpost = [
+		{
+			name: "Blogpost 1",
+			beschreibung: "Hier steht dann eine kurze beschreibung des Blogposts 1 wo ein grober Überblick gegeben werden kann."
+		},
+		{
+			name: "Blogpost 2",
+			beschreibung: "Hier steht dann eine kurze beschreibung des Blogposts 2 wo ein grober Überblick gegeben werden kann."
+		},
+		{
+			name: "Blogpost 3",
+			beschreibung: "Hier steht dann eine kurze beschreibung des Blogposts 3 wo ein grober Überblick gegeben werden kann."
+		}
+	]
 
 </script>
 
@@ -10,40 +27,17 @@
 <!--------------------------------------------------------------------------->
 <style>
 
-	.jumbotron {
-		max-width: 750px;
-		max-height: 750px;
-		margin: auto;
-		margin-top: 40px;
-		margin-bottom: 30px;
-		padding: 20px;
-	}
-
-	.containerBackground {
-		margin-left: 5px;
-		margin-right: 5px;
-	}
-
-
 </style>
 
 <!--------------------------------------------------------------------------->
 <!----------------------- HTML / MARKUP DER COMPONENTE ---------------------->
 <!--------------------------------------------------------------------------->
 <svelte:head>
-	<title>Home</title>
+	<title>Blog</title>
 </svelte:head>
 
-<div class="containerBackground">
-<div class="jumbotron">
-<div class="embed-responsive embed-responsive-16by9">
-	<iframe 
-		class="embed-responsive-item" 
-		src="https://www.youtube.com/embed/DilHMEovGgY" 
-		allowfullscreen
-		title="Immore Video">
-	</iframe>
-</div>
-</div>
-<div style="height:100px;"></div>
-</div>
+{#each blogpost as blog}
+	<BlogBeitrag bind:name={blog.name} bind:beschreibung={blog.beschreibung}/>
+{/each}
+
+

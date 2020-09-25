@@ -28,25 +28,37 @@
 	.nav-links {
 		display: flex;
 		list-style: none;
-		width: 30%;
+		width: 50%;
 		height: 100%;
-		justify-content: space-between;
+		justify-content: space-around;
 		align-items: center;
 
 	}
 
-	.nav-links li a {
+	.nav-none-Market {
 		color: white;
 		text-decoration: none;
+		font-weight: bold;
 		font-size: 16px;
-	}
-
-	.active {
-		color: darkred;
+		padding: 10px;
 	}
 
 	.nav-links li a:hover {
-		color: darkred;
+		background-color: white;
+		color:  #008ACD;
+		font-weight: bold;
+		border-radius: 10px;
+	}
+
+	.nav-market {
+		background-color: white;
+		color:  #008ACD;
+		font-weight: bold;
+		border-radius: 10px;
+		text-decoration: none;
+		font-weight: bold;
+		font-size: 16px;
+		padding: 10px;
 	}
 	
 	.containerFix {
@@ -62,7 +74,6 @@
 		padding-bottom: 5px;
 		font-size: 30px;
 	}
-
 
 	@media screen and (max-width: 768px) {
 		.nav-links {
@@ -149,18 +160,18 @@
 	<ul class="{tog == false ? 'nav-links' : 'nav-links open'}">
 		<li><a 	aria-current="{segment === undefined ? 'page' : undefined}" 
 			href="." 
-			class="{segment === undefined ? "active" : ""}" on:click={onClick}>
+			class="{segment === undefined ? "nav-market" : "nav-none-Market "}" on:click={onClick}>
 			Home
 		</a></li>
-		<li><a 	aria-current="{segment === 'about' ? 'page' : undefined}" 
-			href="about"
-			class="{segment === 'about' ? "active" : ""}" on:click={onClick}>
+		<li><a 	aria-current="{segment === 'blog' ? 'page' : undefined}" 
+			href="blog"
+			class="{segment === 'blog' ? "nav-market" : "nav-none-Market "}" on:click={onClick}>
 			Blog
 		</a></li>
 		<li><a 	rel=prefetch 
-			aria-current="{segment === 'blog' ? 'page' : undefined}" 
-			href="blog"
-			class="{segment === 'blog' ? "active" : ""}" on:click={onClick}>
+			aria-current="{segment === 'ueber_uns' ? 'page' : undefined}" 
+			href="ueber_uns"
+			class="{segment === 'ueber_uns' ? "nav-market" : "nav-none-Market "}" on:click={onClick}>
 			Über uns
 		</a></li>
 	</ul>
