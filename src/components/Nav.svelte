@@ -158,17 +158,17 @@
 		<div class="lineEnd"></div>
 	</div>
 	<ul class="{tog == false ? 'nav-links' : 'nav-links open'}">
-		<li><a 	aria-current="{segment === undefined ? 'page' : undefined}" 
+		<li style="padding: 15px;"><a 	aria-current="{segment === undefined ? 'page' : undefined}" 
 			href="." 
 			class="{segment === undefined ? "nav-market" : "nav-none-Market "}" on:click={onClick}>
 			Home
 		</a></li>
-		<li><a 	aria-current="{segment === 'blog' ? 'page' : undefined}" 
+		<li style="padding: 15px;"><a 	aria-current="{segment === 'blog' ? 'page' : undefined}" 
 			href="blog"
 			class="{segment === 'blog' ? "nav-market" : "nav-none-Market "}" on:click={onClick}>
 			Blog
 		</a></li>
-		<li><a 	rel=prefetch 
+		<li style="padding: 15px;"><a 	rel=prefetch 
 			aria-current="{segment === 'ueber_uns' ? 'page' : undefined}" 
 			href="ueber_uns"
 			class="{segment === 'ueber_uns' ? "nav-market" : "nav-none-Market "}" on:click={onClick}>
