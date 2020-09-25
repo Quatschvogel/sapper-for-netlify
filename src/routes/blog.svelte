@@ -17,6 +17,14 @@
 		{
 			name: "Blogpost 3",
 			beschreibung: "Hier steht dann eine kurze beschreibung des Blogposts 3 wo ein grober Überblick gegeben werden kann."
+		},
+		{
+			name: "Blogpost 4",
+			beschreibung: "Hier steht dann eine kurze beschreibung des Blogposts 4 wo ein grober Überblick gegeben werden kann."
+		},
+		{
+			name: "Blogpost 5",
+			beschreibung: "Hier steht dann eine kurze beschreibung des Blogposts 5 wo ein grober Überblick gegeben werden kann."
 		}
 	]
 
@@ -36,6 +44,7 @@
 	<title>Blog</title>
 </svelte:head>
 
+<div style="height:30px"></div>
 {#each blogpost as blog}
 	<BlogBeitrag bind:name={blog.name} bind:beschreibung={blog.beschreibung}/>
 {/each}
