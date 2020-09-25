@@ -3,6 +3,7 @@
 <!--------------------------------------------------------------------------->
 <script>
 	import BlogBeitrag from '../components/blog_beitrag.svelte'
+
 	let name = "Kilian";
 
 	let blogpost = [

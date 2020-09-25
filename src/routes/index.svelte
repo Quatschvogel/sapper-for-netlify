@@ -1,8 +1,11 @@
 <!--------------------------------------------------------------------------->
 <!------------------------ JAVASCRIPT DER COMPONENTE ------------------------>
 <!--------------------------------------------------------------------------->
-<script>
+<script>import BlogBeitrag from "../components/blog_beitrag.svelte";
 
+import Blogbeitrag from "../components/blog_beitrag.svelte";
+let name = "Blogpost5";
+let beschreibung = "Das hier ist die Beschreibung des neusten Blogposts";
 </script>
 
 <!--------------------------------------------------------------------------->
@@ -34,6 +37,11 @@
 	<title>Home</title>
 </svelte:head>
 
+<div class="jumbotron">
+	<h1>Warum diese Website?</h1>
+	<p style="font-size: 20px">Hier dann entsprechend die beschreibung warum diese Website entstanden ist und so weiter.....</p>
+</div>
+
 <div class="containerBackground">
 <div class="jumbotron">
 <div class="embed-responsive embed-responsive-16by9">
@@ -45,5 +53,6 @@
 	</iframe>
 </div>
 </div>
-<div style="height:100px;"></div>
+<div style="height:20px;"></div>
 </div>
+<BlogBeitrag bind:name={name} bind:beschreibung={beschreibung}/>
