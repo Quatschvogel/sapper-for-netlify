@@ -14,7 +14,8 @@ let beschreibung = "Das hier ist die Beschreibung des neusten Blogposts";
 <style>
 
 	.jumbotron {
-		max-width: 750px;
+		width: 90%;
+        max-width: 50rem;
 		max-height: 750px;
 		margin: auto;
 		margin-top: 40px;
