@@ -1,11 +1,12 @@
 <!--------------------------------------------------------------------------->
 <!------------------------ JAVASCRIPT DER COMPONENTE ------------------------>
 <!--------------------------------------------------------------------------->
-<script>import BlogBeitrag from "../components/blog_beitrag.svelte";
+<script>
+	import BlogBeitrag from "../components/blog_beitrag.svelte";
+	import YoutubeVideo from '../components/youtube_video.svelte'
 
-import Blogbeitrag from "../components/blog_beitrag.svelte";
-let name = "Blogpost5";
-let beschreibung = "Das hier ist die Beschreibung des neusten Blogposts";
+	let name = "Blogpost5";
+	let beschreibung = "Das hier ist die Beschreibung des neusten Blogposts";
 </script>
 
 <!--------------------------------------------------------------------------->
@@ -23,11 +24,6 @@ let beschreibung = "Das hier ist die Beschreibung des neusten Blogposts";
 		padding: 20px;
 	}
 
-	.containerBackground {
-		margin-left: 5px;
-		margin-right: 5px;
-	}
-
 
 </style>
 
@@ -43,17 +39,5 @@ let beschreibung = "Das hier ist die Beschreibung des neusten Blogposts";
 	<p style="font-size: 20px">Hier dann entsprechend die beschreibung warum diese Website entstanden ist und so weiter.....</p>
 </div>
 
-<div class="containerBackground">
-<div class="jumbotron">
-<div class="embed-responsive embed-responsive-16by9">
-	<iframe 
-		class="embed-responsive-item" 
-		src="https://www.youtube.com/embed/DilHMEovGgY" 
-		allowfullscreen
-		title="Immore Video">
-	</iframe>
-</div>
-</div>
-<div style="height:20px;"></div>
-</div>
+<YoutubeVideo/>
 <BlogBeitrag bind:name={name} bind:beschreibung={beschreibung}/>

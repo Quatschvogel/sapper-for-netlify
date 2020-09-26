@@ -1,29 +1,32 @@
 <script>
 	import Nav from '../components/Nav.svelte';
+	import Footer from '../components/footer.svelte';
 	export let segment;
 	export let tog;
 </script>
 
 <style>
-	main {
-		position: relative;
-		background-color: white;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
-	.noScrolling {
-		position: relative;
-		max-width: 56em;
-		background-color: white;
-		padding: 2em;
-		margin: 0 auto;
-		box-sizing: border-box;
-		touch-action: none;
-	}
-</style>
 
+.foot-flex {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.flex-grow {
+	flex-grow: 1;
+}
+
+
+</style>
+<div class="foot-flex">
 <Nav {segment} {tog}/>
 
-<main class="{tog == true ? "noScrolling" : ""}">
+
 	<slot></slot>
-</main>
+<div class="flex-grow"></div>
+
+
+
+<Footer/>
+</div>
