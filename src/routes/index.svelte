@@ -3,6 +3,7 @@
 <!--------------------------------------------------------------------------->
 <script>
 	import BlogBeitrag from "../components/blog_beitrag.svelte";
+	import Postlist from "../components/postlist.svelte";
 	import YoutubeVideo from '../components/youtube_video.svelte'
 
 	let name = "Blogpost5";
@@ -41,3 +42,4 @@
 
 <YoutubeVideo/>
 <BlogBeitrag bind:name={name} bind:beschreibung={beschreibung}/>
+<Postlist/> 

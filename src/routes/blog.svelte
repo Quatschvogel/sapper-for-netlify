@@ -3,31 +3,18 @@
 <!--------------------------------------------------------------------------->
 <script>
 	import BlogBeitrag from '../components/blog_beitrag.svelte'
+	import { onMount } from 'svelte';
 
-	let name = "Kilian";
+	let blogpost = [];
 
-	let blogpost = [
-		{
-			name: "Blogpost 1",
-			beschreibung: "Hier steht dann eine kurze beschreibung des Blogposts 1 wo ein grober Überblick gegeben werden kann."
-		},
-		{
-			name: "Blogpost 2",
-			beschreibung: "Hier steht dann eine kurze beschreibung des Blogposts 2 wo ein grober Überblick gegeben werden kann."
-		},
-		{
-			name: "Blogpost 3",
-			beschreibung: "Hier steht dann eine kurze beschreibung des Blogposts 3 wo ein grober Überblick gegeben werden kann."
-		},
-		{
-			name: "Blogpost 4",
-			beschreibung: "Hier steht dann eine kurze beschreibung des Blogposts 4 wo ein grober Überblick gegeben werden kann."
-		},
-		{
-			name: "Blogpost 5",
-			beschreibung: "Hier steht dann eine kurze beschreibung des Blogposts 5 wo ein grober Überblick gegeben werden kann."
-		}
-	]
+	onMount(async () => {
+		const res = await fetch('http://localhost:8888/wordpress/wp-json/wp/v2/posts');
+		const json = await res.json();
+		blogpost = json 
+	});
+	
+
+	
 
 </script>
 
@@ -47,7 +34,7 @@
 
 <div style="height:30px"></div>
 {#each blogpost as blog}
-	<BlogBeitrag bind:name={blog.name} bind:beschreibung={blog.beschreibung}/>
+	<BlogBeitrag bind:name={blog.title.rendered} bind:beschreibung={blog.beschreibung}/>
 {/each}
 
 
