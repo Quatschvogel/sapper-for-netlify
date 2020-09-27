@@ -1,13 +1,31 @@
 <!--------------------------------------------------------------------------->
 <!------------------------ JAVASCRIPT DER COMPONENTE ------------------------>
 <!--------------------------------------------------------------------------->
+<script context="module">
+	export function preload() {
+		return this.fetch(`blog.json`).then(r => r.json()).then(posts => {
+			return { posts };
+		});
+	}
+</script>
 <script>
 	import BlogBeitrag from "../components/blog_beitrag.svelte";
 	import Postlist from "../components/postlist.svelte";
 	import YoutubeVideo from '../components/youtube_video.svelte'
+	import { onMount } from 'svelte';
 
-	let name = "Blogpost5";
-	let beschreibung = "Das hier ist die Beschreibung des neusten Blogposts";
+  onMount(() => {
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  });
+  export let posts;
 </script>
 
 <!--------------------------------------------------------------------------->
@@ -33,6 +51,7 @@
 <!--------------------------------------------------------------------------->
 <svelte:head>
 	<title>Home</title>
+	<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </svelte:head>
 
 <div class="jumbotron">
@@ -41,5 +60,5 @@
 </div>
 
 <YoutubeVideo/>
-<BlogBeitrag bind:name={name} bind:beschreibung={beschreibung}/>
+<BlogBeitrag bind:name={posts[0].title} bind:beschreibung={posts[0].title}/>
 <Postlist/> 
