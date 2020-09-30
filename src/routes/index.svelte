@@ -1,18 +1,13 @@
 <!--------------------------------------------------------------------------->
 <!------------------------ JAVASCRIPT DER COMPONENTE ------------------------>
 <!--------------------------------------------------------------------------->
-<script context="module">
-	export function preload() {
-		return this.fetch(`blog.json`).then(r => r.json()).then(posts => {
-			return { posts };
-		});
-	}
-</script>
 <script>
 	import BlogBeitrag from "../components/blog_beitrag.svelte";
 	import Postlist from "../components/postlist.svelte";
 	import YoutubeVideo from '../components/youtube_video.svelte'
 	import { onMount } from 'svelte';
+	let name = 'Blogpost1'
+	let beschreibung = 'Das hier ist dann die Beschreibung des Blogsposts'
 
   onMount(() => {
     if (window.netlifyIdentity) {
@@ -60,5 +55,5 @@
 </div>
 
 <YoutubeVideo/>
-<BlogBeitrag bind:name={posts[0].title} bind:beschreibung={posts[0].title}/>
+<BlogBeitrag bind:name={name} bind:beschreibung={beschreibung}/>
 <Postlist/> 
