@@ -3,24 +3,11 @@
 <!--------------------------------------------------------------------------->
 <script>
 	import BlogBeitrag from "../components/blog_beitrag.svelte";
-	import Postlist from "../components/postlist.svelte";
 	import YoutubeVideo from '../components/youtube_video.svelte'
 	import { onMount } from 'svelte';
 	let name = 'Blogpost1'
 	let beschreibung = 'Das hier ist dann die Beschreibung des Blogsposts'
 
-  onMount(() => {
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
-          });
-        }
-      });
-    }
-  });
-  export let posts;
 </script>
 
 <!--------------------------------------------------------------------------->
