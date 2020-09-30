@@ -41,7 +41,7 @@
     <div class="embed-responsive embed-responsive-16by9">
         <iframe 
             class="embed-responsive-item" 
-            src="https://www.youtube.com/embed/DilHMEovGgY" 
+            src="http://www.youtube.com/embed/videoseries?list=UUonqTl9hXgtXqirx7kJ5PUA" 
             allowfullscreen
             title="Immore Video">
         </iframe>
